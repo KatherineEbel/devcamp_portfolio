@@ -33,7 +33,7 @@ puts '5 skills posts created'
 
 9.times do |portfolio_item|
   Portfolio.create!(
-    title: "Porfolio title: #{portfolio_item + 1}",
+    title: "Portfolio title: #{portfolio_item + 1}",
     subtitle: 'My great service',
     body: 'Mixtape deep v drinking vinegar umami, whatever selvage edison bulb PBR&B activated charcoal dreamcatcher organic put a bird on it bespoke subway tile celiac. Offal narwhal kogi, vape tattooed prism mixtape hell of lomo craft beer. Chillwave kale chips normcore cronut 8-bit gentrify yuccie iPhone banjo edison bulb pop-up chia listicle before they sold out. Fashion axe banh mi ethical edison bulb locavore migas sriracha cornhole vice deep v YOLO. Sustainable iPhone mixtape etsy disrupt YOLO raw denim actually vegan pok pok gochujang beard. Tofu leggings brooklyn humblebrag, brunch cornhole bicycle rights chia unicorn aesthetic iPhone tbh williamsburg. Wayfarers tumeric drinking vinegar chambray, XOXO shabby chic man bun edison bulb gastropub waistcoat letterpress.',
     main_image: 'http://via.placeholder.com/600x400',
