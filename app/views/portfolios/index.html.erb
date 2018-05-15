@@ -5,7 +5,7 @@
       <span><%= portfolio.title %></span>
       <br>
       <span><%= portfolio.subtitle %></span>
-      <%= image_tag portfolio.thumb_image %>
+      <%= image_tag portfolio.thumb_image || 'http://via.placeholder.com/350x150'%>
     </ul>
   <% end %>
 </u>
