@@ -8,6 +8,10 @@
       <%= image_tag portfolio.thumb_image || 'http://via.placeholder.com/350x150'%>
       <span><%= portfolio.subtitle %></span>
       <%= link_to "Edit", edit_portfolio_path(portfolio) %>
+      <%= link_to "Delete Project",
+                  portfolio, method: :delete,
+                  data: { confirm: 'Are you sure?'}
+      %>
     </li>
   <% end %>
 </ul>
