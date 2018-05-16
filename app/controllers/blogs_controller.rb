@@ -18,7 +18,8 @@ class BlogsController < ApplicationController
   end
 
   # GET /blogs/1/edit
-  def edit; end
+  def edit
+  end
 
   # POST /blogs
   # POST /blogs.json
@@ -42,10 +43,8 @@ class BlogsController < ApplicationController
         format.html {
           redirect_to @blog, notice: 'Blog was successfully updated.'
         }
-        format.json { render :show, status: :ok, location: @blog }
       else
         format.html { render :edit }
-        format.json { render json: @blog.errors, status: :unprocessable_entity }
       end
     end
   end
