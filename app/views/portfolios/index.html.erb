@@ -1,11 +1,13 @@
 <h1>Portfolio Items</h1>
-<u>
+
+<%= link_to "Create New Project", new_portfolio_path  %>
+<ul>
   <% @portfolio_items.each do |portfolio| %>
-    <ul>
+    <li>
       <span><%= portfolio.title %></span>
-      <br>
-      <span><%= portfolio.subtitle %></span>
       <%= image_tag portfolio.thumb_image || 'http://via.placeholder.com/350x150'%>
-    </ul>
+      <span><%= portfolio.subtitle %></span>
+      <%= link_to "Edit", edit_portfolio_path(portfolio.id) %>
+    </li>
   <% end %>
-</u>
+</ul>
