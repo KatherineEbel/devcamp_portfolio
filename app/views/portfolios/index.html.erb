@@ -4,7 +4,7 @@
 <ul>
   <% @portfolio_items.each do |portfolio| %>
     <li>
-      <span><%= link_to portfolio.title, portfolio_path(portfolio) %></span>
+      <span><%= link_to portfolio.title, portfolio_show_path(portfolio) %></span>
       <%= image_tag portfolio.thumb_image || 'http://via.placeholder.com/350x150'%>
       <span><%= portfolio.subtitle %></span>
       <%= link_to "Edit", edit_portfolio_path(portfolio) %>
