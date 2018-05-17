@@ -1,4 +1,12 @@
-# frozen_string_literal: true
+topics = ['Rails', 'Angular', 'Software Engineering']
+topics.each do |topic|
+  Topic.create!(
+    title: topic
+  )
+end
+
+puts '3 topics created'
+
 content = [
   'Listicle YOLO cliche lo-fi. Brunch craft beer chartreuse brooklyn, humblebrag mustache vape 3 wolf moon bitters offal health goth migas portland enamel pin. Subway tile iceland master cleanse, bitters flannel fixie literally ethical affogato blue bottle glossier. Health goth craft beer messenger bag chicharrones. Cliche quinoa disrupt asymmetrical fixie lomo etsy pickled gastropub flannel organic blog bitters copper mug +1.',
   'PBR&B vape messenger bag knausgaard freegan plaid vice taxidermy semiotics pitchfork bicycle rights wayfarers whatever tofu. Fashion axe thundercats gentrify, try-hard ramps offal flexitarian cred whatever edison bulb vinyl actually bitters letterpress. Fam readymade bushwick, knausgaard man bun meditation selfies brooklyn wayfarers fingerstache celiac pickled chia blog asymmetrical. Chicharrones street art before they sold out, shabby chic salvia tattooed retro everyday carry taiyaki slow-carb bicycle rights crucifix yuccie chillwave mumblecore. Fingerstache taiyaki pok pok air plant whatever cred blog, forage hashtag umami. Brooklyn biodiesel etsy whatever af master cleanse small batch cornhole crucifix snackwave coloring book.',
@@ -11,10 +19,13 @@ content = [
   'Poke tilde yuccie, marfa drinking vinegar umami gochujang tote bag green juice vaporware. Deep v iceland tote bag, vaporware kogi jianbing tacos poutine chillwave austin bushwick ethical authentic vinyl flannel. Neutra kitsch retro next level hot chicken live-edge seitan, adaptogen aesthetic skateboard craft beer tote bag yuccie slow-carb. Locavore tumblr YOLO, franzen four dollar toast pop-up brooklyn raw denim man braid affogato selfies asymmetrical irony.',
   'Master cleanse echo park marfa disrupt ramps cloud bread. Four dollar toast celiac cold-pressed raw denim banjo cardigan chia trust fund blue bottle biodiesel crucifix tousled iPhone organic. Shaman meggings cold-pressed paleo, tofu hoodie lo-fi cred bespoke enamel pin taxidermy pitchfork man braid lomo. Hell of retro chillwave, migas cronut deep v wolf humblebrag semiotics umami forage. Tbh shabby chic edison bulb vegan, before they sold out pok pok beard neutra crucifix cloud bread typewriter XOXO farm-to-table seitan lyft. Cardigan vinyl tote bag shabby chic asymmetrical hot chicken, ugh PBR&B wayfarers meh live-edge cloud bread banh mi tumblr disrupt.'
 ]
+
+
 content.each_index do |i|
   Blog.create!(
     title: "My Blog Post #{i + 1}",
-    body: content[i]
+    body: content[i],
+    topic_id: Topic.find(Random.new.rand(3) + 1).id
   )
 end
 
@@ -31,15 +42,24 @@ end
 
 puts '5 skills posts created'
 
-9.times do |portfolio_item|
+8.times do |portfolio_item|
   Portfolio.create!(
     title: "Portfolio title: #{portfolio_item + 1}",
-    subtitle: 'My great service',
+    subtitle: 'Ruby on Rails',
     body: 'Mixtape deep v drinking vinegar umami, whatever selvage edison bulb PBR&B activated charcoal dreamcatcher organic put a bird on it bespoke subway tile celiac. Offal narwhal kogi, vape tattooed prism mixtape hell of lomo craft beer. Chillwave kale chips normcore cronut 8-bit gentrify yuccie iPhone banjo edison bulb pop-up chia listicle before they sold out. Fashion axe banh mi ethical edison bulb locavore migas sriracha cornhole vice deep v YOLO. Sustainable iPhone mixtape etsy disrupt YOLO raw denim actually vegan pok pok gochujang beard. Tofu leggings brooklyn humblebrag, brunch cornhole bicycle rights chia unicorn aesthetic iPhone tbh williamsburg. Wayfarers tumeric drinking vinegar chambray, XOXO shabby chic man bun edison bulb gastropub waistcoat letterpress.',
     main_image: 'http://via.placeholder.com/600x400',
     thumb_image: 'http://via.placeholder.com/350x200'
   )
 end
 
+1.times do |portfolio_item|
+  Portfolio.create!(
+    title: "Portfolio title: #{portfolio_item + 1}",
+    subtitle: 'Angular',
+    body: 'Mixtape deep v drinking vinegar umami, whatever selvage edison bulb PBR&B activated charcoal dreamcatcher organic put a bird on it bespoke subway tile celiac. Offal narwhal kogi, vape tattooed prism mixtape hell of lomo craft beer. Chillwave kale chips normcore cronut 8-bit gentrify yuccie iPhone banjo edison bulb pop-up chia listicle before they sold out. Fashion axe banh mi ethical edison bulb locavore migas sriracha cornhole vice deep v YOLO. Sustainable iPhone mixtape etsy disrupt YOLO raw denim actually vegan pok pok gochujang beard. Tofu leggings brooklyn humblebrag, brunch cornhole bicycle rights chia unicorn aesthetic iPhone tbh williamsburg. Wayfarers tumeric drinking vinegar chambray, XOXO shabby chic man bun edison bulb gastropub waistcoat letterpress.',
+    main_image: 'http://via.placeholder.com/600x400',
+    thumb_image: 'http://via.placeholder.com/350x200'
+  )
+end
 
 puts '9 portfolio projects posts created'
