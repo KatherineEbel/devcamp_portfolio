@@ -6,6 +6,21 @@ class Portfolio < ApplicationRecord
   validates_presence_of :title, :body, :main_image, :thumb_image
 
   has_many :technologies
+  # adding nested attributes on rails console ex. below
+  # Portfolio.create!(
+  # title: "Web app",
+  # subtitle: "asdflkj",
+  # body: "asdflkj",
+  # technologies_attributes: [
+  # {name: 'Ruby'},
+  # {name: 'Rails'},
+  # {name: 'Angular'},
+  # {name: 'Ionic'}]
+  # )
+  accepts_nested_attributes_for :technologies,
+                                reject_if: lambda { |attrs|
+                                  attrs['name'].blank?
+                                }
 
   # callback
   after_initialize :set_defaults
