@@ -5,6 +5,8 @@ class Portfolio < ApplicationRecord
 
   validates_presence_of :title, :body, :main_image, :thumb_image
 
+  has_many :technologies
+
   # callback
   after_initialize :set_defaults
 
