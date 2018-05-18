@@ -6,11 +6,15 @@ class BlogsController < ApplicationController
   # GET /blogs.json
   def index
     @blogs = Blog.all
+    @page_title = 'Katherine\'s Blog'
   end
 
   # GET /blogs/1
   # GET /blogs/1.json
-  def show; end
+  def show
+    @page_title = @blog.title
+    @seo_keywords = @blog.title
+  end
 
   # GET /blogs/new
   def new
@@ -54,7 +58,7 @@ class BlogsController < ApplicationController
   def destroy
     @blog.destroy
     respond_to do |format|
-      format.html do 
+      format.html do
         redirect_to blogs_url, notice: 'Blog was successfully destroyed.'
       end
       format.json { head :no_content }

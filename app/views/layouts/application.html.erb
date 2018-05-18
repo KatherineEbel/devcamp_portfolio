@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>DevcampPortfolio</title>
+    <title><%= @page_title %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <meta name="description" content="<%= @seo_keywords %>">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <nav>
+      <ul>
+        <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "About Me", about_me_path %></li>
+        <li><%= link_to "Contact", contact_path %></li>
+        <li><%= link_to "Blog", blogs_path %></li>
+        <li><%= link_to "Portfolio", portfolios_path %></li>
+      </ul>
+    </nav>
+
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <% if current_user.is_a? User %>
