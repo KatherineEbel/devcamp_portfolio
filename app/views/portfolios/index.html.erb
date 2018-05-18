@@ -2,16 +2,5 @@
 
 <%= link_to "Create New Project", new_portfolio_path  %>
 <ul>
-  <% @portfolio_items.each do |portfolio| %>
-    <li>
-      <span><%= link_to portfolio.title, portfolio_show_path(portfolio) %></span>
-      <%= image_tag portfolio.thumb_image %>
-      <span><%= portfolio.subtitle %></span>
-      <%= link_to "Edit", edit_portfolio_path(portfolio) %>
-      <%= link_to "Delete Project",
-                  portfolio, method: :delete,
-                  data: { confirm: 'Are you sure?'}
-      %>
-    </li>
-  <% end %>
+  <%= render @portfolio_items %>
 </ul>
