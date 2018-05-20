@@ -41,6 +41,7 @@ gem 'jquery-rails'
 # slugging and permalink plugins for Active Record
 gem 'devise', '~> 4.2'
 gem 'friendly_id', '~> 5.1.0'
+gem 'ke_view_tool', git: 'https://github.com/KatherineEbel/ke_view_tool'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

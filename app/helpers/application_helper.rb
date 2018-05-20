@@ -14,4 +14,8 @@ module ApplicationHelper
     greeting = "Thanks for visiting #{controller} from #{session[:source]}"
     content_tag :p, greeting, class: 'source-greeting'
   end
+
+  def copyright_generator
+    KeViewTool::Renderer.copyright 'Katherine Ebel', 'All rights reserved'
+  end
 end

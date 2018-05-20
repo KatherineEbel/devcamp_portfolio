@@ -4,3 +4,4 @@ class ApplicationController < ActionController::Base
   include GuestUser
   include DefaultContent
 end
+
