@@ -1,6 +1,2 @@
-<h1>Portfolio Items</h1>
-
 <%= link_to "Create New Project", new_portfolio_path if logged_in? :site_admin %>
-<ul>
   <%= render @portfolio_items %>
-</ul>

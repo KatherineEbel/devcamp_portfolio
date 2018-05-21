@@ -4,14 +4,39 @@
   <title><%= @page_title %></title>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="<%= @seo_keywords %>">
   <%= stylesheet_link_tag    'portfolios', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 
 <body>
-  <%= render 'shared/nav' %>
-  <%= yield %>
+  <%= render 'shared/portfolio_header' %>
+  <main role="main">
+
+    <section class="jumbotron text-center">
+      <div class="container">
+        <h1 class="jumbotron-heading">Portfolio Items</h1>
+        <p class="lead text-muted">Some of the projects I have worked on in the past.</p>
+        <p>
+          <%= link_to 'Want to Work With Me?', contact_path, class: 'btn btn-primary my-2' %>
+          <%= link_to 'Check Out My Blog', blogs_path, class: 'btn btn-secondary my-2' %>
+        </p>
+      </div>
+    </section>
+
+    <div class="album py-5 bg-light">
+      <div class="container">
+        <div class="row">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
   <%= source_helper params[:controller] %>
+  <%= render'shared/blog_footer' %>
 </body>
 </html>

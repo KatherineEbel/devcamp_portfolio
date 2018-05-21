@@ -1,10 +1,12 @@
-<li>
-  <span><%= link_to portfolio.title, portfolio_show_path(portfolio) %></span>
-  <%= image_tag portfolio.thumb_image %>
-  <span><%= portfolio.subtitle %></span>
-  <%= link_to "Edit", edit_portfolio_path(portfolio) if logged_in? :site_admin %>
-  <%= link_to("Delete Project",
-              portfolio, method: :delete,
-              data: { confirm: 'Are you sure?'}) if logged_in? :site_admin
-  %>
-</li>
+<div class="col-md-4 align-items-center">
+  <div class="card mb-4 box-shadow">
+    <%= image_tag portfolio.thumb_image, class: 'card-img-top' %>
+    <div class="card-body d-flex justify-content-center">
+      <p class="card-text mb-0">
+        <%= link_to portfolio.title, portfolio_show_path(portfolio) %>
+        - <span><%= portfolio.subtitle %></span>
+      </p>
+    </div>
+  </div>
+
+</div>
