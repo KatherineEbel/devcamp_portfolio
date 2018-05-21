@@ -1,0 +1,22 @@
+
+<!--        <nav class="blog-pagination">-->
+<!--          <a class="btn btn-outline-primary" href="#">Older</a>-->
+<!--          <a class="btn btn-outline-secondary disabled" href="#">Newer</a>-->
+<!--        </nav>-->
+<%= paginator.render do %>
+  <nav>
+    <ul class="pagination">
+      <%= first_page_tag unless current_page.first? %>
+      <%= prev_page_tag unless current_page.first? %>
+      <% each_page do |page| %>
+        <% if page.left_outer? || page.right_outer? || page.inside_window? %>
+          <%= page_tag page %>
+        <% elsif !page.was_truncated? -%>
+          <%= gap_tag %>
+        <% end %>
+      <% end %>
+      <%= next_page_tag unless current_page.last? %>
+      <%= last_page_tag unless current_page.last? %>
+    </ul>
+  </nav>
+<% end %>

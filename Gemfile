@@ -40,10 +40,11 @@ gem 'jquery-rails'
 
 # slugging and permalink plugins for Active Record
 gem 'devise', '~> 4.2'
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.4'
 gem 'friendly_id', '~> 5.1.0'
+gem 'kaminari', '~> 1.1', '>= 1.1.1'
 gem 'ke_view_tool', git: 'https://github.com/KatherineEbel/ke_view_tool'
 gem 'petergate', '~> 1.8', '>= 1.8.1'
-gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.4'
 
 
 group :development, :test do
