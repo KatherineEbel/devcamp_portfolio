@@ -112,5 +112,7 @@ body {
  */
 
 .auth-links {
-
+  a {
+    color: theme-color('primary');
+  }
 }
