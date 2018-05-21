@@ -16,7 +16,7 @@ module ApplicationHelper
   def source_helper(controller)
     return unless session[:source]
     greeting = "Thanks for visiting #{controller} from #{session[:source]}"
-    content_tag :p, greeting, class: 'source-greeting'
+    content_tag :p, greeting, class: 'source-greeting text-center'
   end
 
   def copyright_generator
