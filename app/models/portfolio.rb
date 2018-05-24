@@ -8,6 +8,7 @@ class Portfolio < ApplicationRecord
   mount_uploader :thumb_image, PortfolioUploader
   mount_uploader :main_image, PortfolioUploader
   accepts_nested_attributes_for :technologies,
+                                allow_destroy: true,
                                 reject_if: lambda { |attrs|
                                   attrs['name'].blank?
                                 }

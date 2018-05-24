@@ -50,7 +50,7 @@ gem 'kaminari', '~> 1.1', '>= 1.1.1'
 gem 'ke_view_tool', git: 'https://github.com/KatherineEbel/ke_view_tool'
 gem 'mini_magick', '~> 4.8'
 gem 'petergate', '~> 1.8', '>= 1.8.1'
-
+gem 'cocoon', '~> 1.2', '>= 1.2.11'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
