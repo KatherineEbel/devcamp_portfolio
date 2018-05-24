@@ -37,6 +37,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
+gem 'jquery-ui-rails', '~> 5.0', '>= 5.0.5'
 
 # slugging and permalink plugins for Active Record
 gem 'devise', '~> 4.2'
