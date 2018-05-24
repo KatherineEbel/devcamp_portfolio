@@ -34,7 +34,19 @@
     <div class="col-md-6 align-self-center">
       <div class="form-group">
         <%= form.label :body %>
-        <%= form.text_area :body, class: 'form-control', rows: 15 %>
+        <%= form.text_area :body, class: 'form-control', rows: 10 %>
+      </div>
+
+      <div class="form-group">
+        <label class="btn btn-primary">
+          Upload Main Image <%= form.file_field :main_image, style: 'display:none;' %>
+        </label>
+
+      </div>
+      <div class="form-group">
+        <label class="btn btn-primary">
+          Upload Thumb Image <%= form.file_field :thumb_image, style: 'display:none;' %>
+        </label>
       </div>
     </div>
   </div>

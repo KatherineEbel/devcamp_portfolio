@@ -40,11 +40,15 @@ gem 'jquery-rails'
 gem 'jquery-ui-rails', '~> 5.0', '>= 5.0.5'
 
 # slugging and permalink plugins for Active Record
+gem 'carrierwave', '~> 1.2', '>= 1.2.2'
+gem 'carrierwave-aws', '~> 1.3'
 gem 'devise', '~> 4.2'
+gem 'dotenv-rails', '~> 2.4'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.4'
 gem 'friendly_id', '~> 5.1.0'
 gem 'kaminari', '~> 1.1', '>= 1.1.1'
 gem 'ke_view_tool', git: 'https://github.com/KatherineEbel/ke_view_tool'
+gem 'mini_magick', '~> 4.8'
 gem 'petergate', '~> 1.8', '>= 1.8.1'
 
 
