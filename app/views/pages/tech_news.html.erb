@@ -1,11 +1,13 @@
-<main role="main" class="inner cover">
+<main role="main" class="inner cover pt-3">
   <h1 class="cover-heading">Tech News</h1>
   <div class="row">
     <% @tweets.each do |tweet| %>
       <div class="col-md-6">
-        <div class="tech-news">
-          <div class="card">
-            <%= twitter_parser tweet %>
+        <div class="tech-news m-3">
+          <div class="card text-dark p-2">
+            <div class="card-body">
+              <p><%= twitter_parser tweet %></p>
+            </div>
           </div>
         </div>
       </div>
