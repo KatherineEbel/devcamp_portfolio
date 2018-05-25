@@ -22,10 +22,10 @@
             poster: 'home_bg.png'
           ) %>
       <%= render 'shared/application_nav' %>
-      <%= render 'shared/alerts' %>
       <%= yield %>
       <%#= source_helper params[:controller] %>
       <%= render 'shared/application_footer' %>
+      <%= alerts %>
     </div>
   </body>
 </html>
