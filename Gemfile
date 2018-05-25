@@ -52,6 +52,7 @@ gem 'mini_magick', '~> 4.8'
 gem 'petergate', '~> 1.8', '>= 1.8.1'
 gem 'cocoon', '~> 1.2', '>= 1.2.11'
 gem 'gritter', '~> 1.2'
+gem 'twitter', '~> 6.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
